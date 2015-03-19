@@ -4,8 +4,7 @@ class GamesController < ApplicationController
   respond_to :html
 
   def index
-    @games = Game.all
-    respond_with(@games)
+  @games = Game.where(availability: true)
   end
 
   def show
@@ -18,7 +17,6 @@ class GamesController < ApplicationController
   end
 
   def edit
-    authorize! :manage, @game
   end
 
   def create
