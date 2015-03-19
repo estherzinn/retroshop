@@ -1,29 +1,19 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Name:</strong>
-  <%= @game.name %>
-</p>
-
-<p>
-  <strong>Platform:</strong>
-  <%= @game.platform %>
-</p>
-
-<p>
-  <strong>Description:</strong>
-  <%= @game.description %>
-</p>
-
-<p>
-  <strong>Price:</strong>
-  <%= @game.price %>
-</p>
-
-<p>
-  <strong>Availability:</strong>
-  <%= @game.availability %>
-</p>
-
-<%= link_to 'Edit', edit_game_path(@game) %> |
-<%= link_to 'Back', games_path %>
+<div class="container">
+<div class="row">
+ 
+<div class="col-md-6">
+<%= image_tag "snes.jpg", class: "img-responsive" %>
+</div>
+ 
+<div class="col-md-6">
+<div class="col-md-6">
+<h3><%= @game.name %> by <%= @game.platform %></h3>
+<p class="justify"><%= @game.description %></p>
+<h4 class="text-right">$<%= @game.price.to_f / 100 %></h4>
+</div>
+ 
+</div>
+</div>
+ 
+<%= link_to "Edit", edit_game_path(@game)  %>
+<%= link_to "Back", game_path  %>

@@ -1,9 +1,8 @@
 Rails.application.routes.draw do
   resources :games
 
-  resources :books
-
   devise_for :users
+  
   get 'pages/home'
 
   # The priority is based upon order of creation: first created -> highest priority.

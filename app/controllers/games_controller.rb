@@ -18,6 +18,7 @@ class GamesController < ApplicationController
   end
 
   def edit
+    authorize! :manage, @game
   end
 
   def create
