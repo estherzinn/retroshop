@@ -19,6 +19,7 @@ class GamesController < ApplicationController
   end
 
   def edit
+    authorize! :manage, @game
   end
 
   def create
@@ -28,11 +29,13 @@ class GamesController < ApplicationController
   end
 
   def update
+    authorize! :manage, @game
     @game.update(game_params)
     respond_with(@game)
   end
 
   def destroy
+    authorize! :manage, @game
     @game.destroy
     respond_with(@game)
   end
