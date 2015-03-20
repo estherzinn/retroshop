@@ -6,7 +6,7 @@ class Ability
     #
       user ||= User.new # guest user (not logged in)
       can :read, :all
-      can :manage, game do |game|
+      can :manage, @game do |game|
         game.try(:user) == user
       end
   

@@ -1,12 +1,14 @@
 class GamesController < ApplicationController
-  before_action :set_game, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!, only: [:new, :edit, :create, :update, :destroy]
+  before_action :set_game, only: [:show, :edit, :update, :destroy]
+  
 
 
   respond_to :html
 
   def index
   @games = Game.where(availability: true)
+  respond_with(@games)
   end
 
   def show
