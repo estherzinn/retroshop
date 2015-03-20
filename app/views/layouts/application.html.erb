@@ -1,15 +1,21 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Retroshop</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-  <%= render "layouts/header" %>
-</head>
-<body>
-
-<%= yield %>
-
-</body>
+  <head>
+    <title>One Stop Retro Shop</title>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
+    <%= render "layouts/header" %>
+    <div class="container">
+        <% flash.each do |type, message| %>
+          <div class="alert alert-info fade-in">
+          <button class="close" data-dismiss="alert">x</button>
+        <%= message %>
+          </div>
+        <% end %>
+      <%= yield %>
+    </div>
+  </body>
 </html>
