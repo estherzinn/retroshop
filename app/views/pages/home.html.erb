@@ -1,7 +1,13 @@
-<div class="jumbotron">
-<h1>Welcome to our store</h1>
-<p>The newest in old tech!</p>
-<%= link_to "Games", games_path, class: "btn btn-primary btn-md" %>
-<%= link_to "Sign Up", new_user_registration_path, class: "btn btn-primary btn-md" %>
+<div class="jumbotron text-center">
+<h2 class="uppercase">Welcome to our store</h2>
+<p>The largest online retro game store</p>
+<%= link_to "Games", games_path, class: "btn btn-primary btn-block" %>
+<%= link_to "Sign Up", new_user_registration_path, class: "btn btn-primary btn-block" %>
+</div>
+ 
+<div class="row">
+ 
+<%= render @games %>
+ 
 </div>
  

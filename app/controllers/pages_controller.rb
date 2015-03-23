@@ -5,7 +5,7 @@ class PagesController < ApplicationController
     if current_user
       redirect_to games_path
     end
-    
+    @games = Game.last(4)
   end
  
   def dashboard
