@@ -35,6 +35,9 @@ gem 'aws-sdk', '< 2.0'
 
 gem 'friendly_id'
 
+gem 'stripe'
+
+
 
 
 # bundle exec rake doc:rails generates the API under doc/api.
