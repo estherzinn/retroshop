@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150323141558) do
+ActiveRecord::Schema.define(version: 20150324131722) do
 
   create_table "friendly_id_slugs", force: true do |t|
     t.string   "slug",                      null: false
@@ -47,6 +47,16 @@ ActiveRecord::Schema.define(version: 20150323141558) do
   end
 
   add_index "games", ["slug"], name: "index_games_on_slug", unique: true
+
+  create_table "sales", force: true do |t|
+    t.string   "buyer_email"
+    t.string   "seller_email"
+    t.integer  "amount"
+    t.string   "guid"
+    t.integer  "game_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false
