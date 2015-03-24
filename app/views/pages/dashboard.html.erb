@@ -1,38 +1,21 @@
 <div class="row">
 <h1 class="text-center">Dashboard</h1>
-  <div class="col-md-4">
-    <h3 class="text-center">
-      games <%= link_to "New game", new_game_path, class: "btn btn-primary bt-sm"  %>
-    </h3>
-    <table class="table">
-        <thead>
-          <tr>
-            <th>Id</th>
-            <th>Name</th>
-            <th>Available</th>  
-            <th></th>
-          </tr>
-        </thead>
-        <tbody>
-        <% @games.each do |game| %> 
-          <tr>
-            <td><%= game.id %></td>
-            <td><%= link_to game.name, game_path(game) %></td>
-            <td><%= game.availability %></td>
-            <td><%= link_to "Edit", edit_game_path(game) %></td>
-          </tr>
-        <% end %>
-        </tbody>
-      </table>
-  </div>
-  <div class="col-md-4">
-    <h3 class="text-center">
-      Purchased
-    </h3>
-  </div>
-  <div class="col-md-4">
-    <h3 class="text-center">
-      Sales
-    </h3>
-  </div>
+<div class="col-md-4">
+<h3 class="text-center">
+Games <%= link_to "New Game", new_game_path, class: "btn btn-primary btn-sm" %>
+</h3>
+<%= render "games" %>
+</div>
+<div class="col-md-4">
+<h3 class="text-center">
+Purchased
+</h3>
+<%= render "purchased" %>
+</div>
+<div class="col-md-4">
+<h3 class="text-center">
+Sales
+</h3>
+<%= render "sales" %>
+</div>
 </div>
