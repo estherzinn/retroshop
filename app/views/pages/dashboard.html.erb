@@ -1,21 +1,31 @@
+<div class="container">
 <div class="row">
 <h1 class="text-center">Dashboard</h1>
+<div class="text-center"><%= link_to "New Game", new_game_path, class: "btn btn-primary btn-sm" %></div>
+<div class="clearfix"></div>
 <div class="col-md-4">
-<h3 class="text-center">
-Games <%= link_to "New Game", new_game_path, class: "btn btn-primary btn-sm" %>
+<div class="dash-box">
+<h4 class="white uppercase">
+Games
 </h3>
+</div>
 <%= render "games" %>
 </div>
 <div class="col-md-4">
-<h3 class="text-center">
+<div class="dash-box">
+<h4 class="white uppercase">
 Purchased
 </h3>
+</div>
 <%= render "purchased" %>
 </div>
 <div class="col-md-4">
-<h3 class="text-center">
+<div class="dash-box">
+<h4 class="white uppercase">
 Sales
 </h3>
+</div>
 <%= render "sales" %>
+</div>
 </div>
 </div>
