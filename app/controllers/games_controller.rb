@@ -21,6 +21,7 @@ class GamesController < ApplicationController
   end
 
   def edit
+    @game = Game.friendly.find(params[:id])
     authorize! :manage, @game
   end
 
