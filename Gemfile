@@ -43,7 +43,7 @@ gem 'stripe'
 
 gem 'aasm'
 
-
+gem 'figaro', '1.0'
 
 
 
