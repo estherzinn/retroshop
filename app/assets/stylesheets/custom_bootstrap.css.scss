@@ -82,7 +82,7 @@ body {
 
 
 .background-image {
-  background: url(<%= asset_path 'bg.jpg' %>) no-repeat center center fixed;
+  background: url('/assets/bg.jpg') no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
